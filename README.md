@@ -105,6 +105,16 @@ url="http://{edit_here_url_to_the_app_public_folder}/"
 crontab setCron.sh
 ```
 
+## Everybody Loves Screenshots
+
+### Here's the backup tag
+![alt tag](https://raw.githubusercontent.com/minorsolis/ec2InstanceBackup/master/general/documentation/1.jpg)
+
+### Here's how the images will be created.
+![alt tag](https://raw.githubusercontent.com/minorsolis/ec2InstanceBackup/master/general/documentation/2.jpg)
+
+
+
 ## Questions?
 ```
 	Send me an email to minorsolis(at)gmail.com
