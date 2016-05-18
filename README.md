@@ -91,12 +91,12 @@ This api will delete the backups (deregister the Image) when it's more than X da
 
 If you want this to run automatically, there's a cron job setup already provided. You will need to edit the $url and $path of your installation.
 
-1. Edit this file: **ec2InstanceBackup/general/cron/every1Day.sh**. You can setup this file in your crontab as required or (if you're lazy, go to the step #2).
+- 1. Edit this file: **ec2InstanceBackup/general/cron/every1Day.sh**. You can setup this file in your crontab as required or (if you're lazy, go to the step #2).
 ```
 url="http://{edit_here_url_to_the_app_public_folder}/"
 ```
 
-2. Edit the path of your local server in this file: **ec2InstanceBackup/general/cron/set/setCron.sh**
+- 2. Edit the path of your local server in this file: **ec2InstanceBackup/general/cron/set/setCron.sh**
 ```
 * * * * * {edit_here_path_to_your_installation}/ec2InstanceBackup/general/cron/every1Day.sh
 ```
