@@ -98,7 +98,7 @@ url="http://{edit_here_url_to_the_app_public_folder}/"
 
 - 2. Edit the path of your local server in this file: **ec2InstanceBackup/general/cron/set/setCron.sh**
 ```
-* * * * * {edit_here_path_to_your_installation}/ec2InstanceBackup/general/cron/every1Day.sh
+0 1 * * * {edit_here_path_to_your_installation}/ec2InstanceBackup/general/cron/every1Day.sh
 ```
 - 2.1 After your edit the file just run:
 ```
