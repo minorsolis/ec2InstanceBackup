@@ -20,39 +20,43 @@ This application will allow you to make backups (Full Images) of your AWS EC2 In
 #### #1 Clone this repository
 ```javascript
 git clone https://github.com/minorsolis/ec2InstanceBackup.git
+
+Go inside of the main folder:
+cd ec2InstanceBackup/
+
 ```
 
 #### #2 Composer update
 
 ```javascript
-cd ec2InstanceBackup/app
+cd app
 composer update
 ```
 
-#### #3 Copy the ec2InstanceBackup/app/.env.example to .env
+#### #3 Copy the app/.env.example to .env
 
 ```javascript
-cd ec2InstanceBackup/app
+cd app
 cp -rp .env.example .env
 ```
 
 #### #4 Set the permissions for Laravel Cache and Logs
 
 ```javascript
-chmor -R 777 ec2InstanceBackup/app/storage
-chmor -R 777 ec2InstanceBackup/app/bootstrap/cache
+chmod -R 777 app/storage
+chmod -R 777 app/bootstrap/cache
 ```
 
 #### #5 Set your own application key
 
 ```javascript
-cd ec2InstanceBackup/app
+cd app
 php artisan key:generate
 ```
 
 #### #6 Set your AWS Credentials
 
-With an editor open the file **ec2InstanceBackup/app/.env** and the following credentials:
+With an editor open the file **app/.env** and the following credentials:
 ```javascript
 AWS_ACCESS_KEY_ID=your_access_key_here
 AWS_SECRET_ACCESS_KEY=your_secret_key_here
@@ -63,13 +67,13 @@ AWS_REGION=your_region_here (default: us-east-1)
 
 You have the API's available from your browser:
 
-##### 1. /ec2InstanceBackup/app/public/?function=createImage
+##### 1. /app/public/?function=createImage
 
 ```
 This api will create one full backup (Full Image) everyday for each instance that has the tag with the name "backup".
 ```
 
-##### 2. /ec2InstanceBackup/app/public/?function=deregisterImage
+##### 2. /app/public/?function=deregisterImage
 
 ```
 This api will delete the backups (deregister the Image) when it's more than X days old (default: 7 days).
@@ -78,7 +82,7 @@ This api will delete the backups (deregister the Image) when it's more than X da
 ## More configuration options
 
 ```javascript
-{open the file} =  ec2InstanceBackup/app/config/api.php
+{open the file} =  app/config/api.php
 ```
 
 ```javascript
@@ -91,14 +95,14 @@ This api will delete the backups (deregister the Image) when it's more than X da
 
 If you want this to run automatically, there's a cron job setup already provided. You will need to edit the $url and $path of your installation.
 
-- 1. Edit this file: **ec2InstanceBackup/general/cron/every1Day.sh**. You can setup this file in your crontab as required or (if you're lazy, go to the step #2).
+- 1. Edit this file: **general/cron/every1Day.sh**. You can setup this file in your crontab as required or (if you're lazy, go to the step #2).
 ```
 url="http://{edit_here_url_to_the_app_public_folder}/"
 ```
 
-- 2. Edit the path of your local server in this file: **ec2InstanceBackup/general/cron/set/setCron.sh**
+- 2. Edit the path of your local server in this file: **general/cron/set/setCron.sh**
 ```
-0 1 * * * {edit_here_path_to_your_installation}/ec2InstanceBackup/general/cron/every1Day.sh
+0 1 * * * {edit_here_path_to_your_installation}/general/cron/every1Day.sh
 ```
 - 2.1 After your edit the file just run:
 ```
