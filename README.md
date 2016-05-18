@@ -11,7 +11,7 @@ This application will allow you to make backups (Full Images) of your AWS EC2 In
 4. AWS API Credentials
 
 ## Notes
-- This application was created using Laravel 5.1. If you want to extende it please go to (https://laravel.com/docs/5.1) for more info.
+- This application was created using Laravel 5.1. If you want to extend it please go to (https://laravel.com/docs/5.1) for more info.
 - The ec2InstanceBackup/general/httpd folder is something that you can delete. It's there only if you want to setup this in multiple AWS instances with autoscaling groups.
 
 
