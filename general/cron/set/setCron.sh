@@ -1,1 +1,1 @@
-* * * * * /stuff/prod/general/cron/every1Day.sh
+* * * * * {edit_here_path_to_your_installation}/ec2InstanceBackup/general/cron/every1Day.sh
