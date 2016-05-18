@@ -17,33 +17,33 @@ This application will allow you to make backups (Full Images) of your AWS EC2 In
 
 ## Installation
 
-### #1 Clone this repository
+#### #1 Clone this repository
 ```javascript
 git clone https://github.com/minorsolis/ec2InstanceBackup.git
 ```
 
-### #2 Composer update
+#### #2 Composer update
 
 ```javascript
 cd ec2InstanceBackup/app
 composer update
 ```
 
-### #3 Copy the ec2InstanceBackup/app/.env.example to .env
+#### #3 Copy the ec2InstanceBackup/app/.env.example to .env
 
 ```javascript
 cd ec2InstanceBackup/app
 cp -rp .env.example .env
 ```
 
-### #4 Set your own application key
+#### #4 Set your own application key
 
 ```javascript
 cd ec2InstanceBackup/app
 php artisan key:generate
 ```
 
-### #5 Set your AWS Credentials
+#### #5 Set your AWS Credentials
 
 With an editor open the file **ec2InstanceBackup/app/.env** and the following credentials:
 ```javascript
