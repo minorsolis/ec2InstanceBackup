@@ -1,5 +1,5 @@
 # AWS EC2 Instance Backups
-This application will allow you to make backups (Full Images) of the instances that you want, all you need to do is setup this system and **add a tag in the instance that you want to backup with the name "backup"**.
+This application will allow you to make backups (Full Images) of your AWS EC2 Instances. Just set this up and **add a tag in the instance with the name "backup"** and that's it.
 
 
 ## Requirements
@@ -56,13 +56,13 @@ AWS_REGION=your_region_here (default: us-east-1)
 
 You have the API's available from your browser:
 
-#### 1. /ec2InstanceBackup/app/public/?function=createImage
+##### 1. /ec2InstanceBackup/app/public/?function=createImage
 
 ```
 This api will create one full backup (Full Image) everyday for each instance that has the tag (backup=true).
 ```
 
-#### 2. /ec2InstanceBackup/app/public/?function=deregisterImage
+##### 2. /ec2InstanceBackup/app/public/?function=deregisterImage
 
 ```
 This api will delete the backups when they are more than X days (default: 7 days).
