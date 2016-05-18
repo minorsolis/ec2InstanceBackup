@@ -87,4 +87,5 @@ This api will delete the backups (deregister the Image) when it's more than X da
 'awsInstanceTag'   	=> 'backup'   (the tag searched in the instance)
 ```
 
+## Cron Job Setup
 

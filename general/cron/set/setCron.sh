@@ -1,1 +1,1 @@
-* * * * * /stuff/prod/general/cron/every1Minute.sh
+* * * * * /stuff/prod/general/cron/every1Day.sh
