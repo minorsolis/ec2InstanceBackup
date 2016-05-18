@@ -36,14 +36,21 @@ cd ec2InstanceBackup/app
 cp -rp .env.example .env
 ```
 
-#### #4 Set your own application key
+#### #4 Set the permissions for Laravel Cache and Logs
+
+```javascript
+chmor -R 777 ec2InstanceBackup/app/storage
+chmor -R 777 ec2InstanceBackup/app/bootstrap/cache
+```
+
+#### #5 Set your own application key
 
 ```javascript
 cd ec2InstanceBackup/app
 php artisan key:generate
 ```
 
-#### #5 Set your AWS Credentials
+#### #6 Set your AWS Credentials
 
 With an editor open the file **ec2InstanceBackup/app/.env** and the following credentials:
 ```javascript
