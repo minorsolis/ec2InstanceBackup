@@ -104,3 +104,8 @@ url="http://{edit_here_url_to_the_app_public_folder}/"
 ```
 crontab setCron.sh
 ```
+
+## Questions?
+```
+	Send me an email to minorsolis(at)gmail.com
+```
