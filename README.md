@@ -59,13 +59,13 @@ You have the API's available from your browser:
 ##### 1. /ec2InstanceBackup/app/public/?function=createImage
 
 ```
-This api will create one full backup (Full Image) everyday for each instance that has the tag (backup=true).
+This api will create one full backup (Full Image) everyday for each instance that has the tag with the name "backup".
 ```
 
 ##### 2. /ec2InstanceBackup/app/public/?function=deregisterImage
 
 ```
-This api will delete the backups when they are more than X days (default: 7 days).
+This api will delete the backups (deregister the Image) when it's more than X days old (default: 7 days).
 ```
 
 ## More configuration options
